@@ -1,1 +1,48 @@
-<p>menu works!</p>
+<nav class="bg-[#F5F5DC] px-6 py-3 shadow-md flex items-center justify-between">
+  <img src="https://i.ibb.co/4k3W8Tz/Logonegro.png" alt="Logo Intermontañas" class="h-10">
+
+  <ul class="hidden md:flex space-x-6 text-[#252525] font-medium">
+    <li>
+      <a (click)="redirigir('/')" [ngClass]="{
+           'bg-[#8CC63F] px-3 py-1 rounded-full': rutaActual === '/',
+           'hover:underline': rutaActual !== '/'
+         }" class="transition cursor-pointer">
+        Inicio
+      </a>
+    </li>
+    <li>
+      <a (click)="redirigir('/acerca')" [ngClass]="{
+           'bg-[#8CC63F] px-3 py-1 rounded-full': rutaActual.includes('/acerca'),
+           'hover:underline': !rutaActual.includes('/acerca')
+         }" class="transition cursor-pointer">
+        Acerca
+      </a>
+    </li>
+    <li>
+      <a (click)="redirigir('/comousar')" [ngClass]="{
+           'bg-[#8CC63F] px-3 py-1 rounded-full': rutaActual.includes('/como-usar'),
+           'hover:underline': !rutaActual.includes('/como-usar')
+         }" class="transition cursor-pointer">
+        Cómo usar
+      </a>
+    </li>
+    <li>
+      <a (click)="redirigir('/emprendimientos')" [ngClass]="{
+           'bg-[#8CC63F] px-3 py-1 rounded-full': rutaActual.includes('/emprendimientos'),
+           'hover:underline': !rutaActual.includes('/emprendimientos')
+         }" class="transition cursor-pointer">
+        Emprendimientos
+      </a>
+    </li>
+    <li>
+      <a (click)="redirigir('/contactos')" [ngClass]="{
+           'bg-[#8CC63F] px-3 py-1 rounded-full': rutaActual.includes('/contactos'),
+           'hover:underline': !rutaActual.includes('/contactos')
+         }" class="transition cursor-pointer">
+        Contactos
+      </a>
+    </li>
+  </ul>
+
+  <button class="md:hidden text-3xl text-[#252525]">&#9776;</button>
+</nav>

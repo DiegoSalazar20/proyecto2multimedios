@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+.font-lemon {
+  font-family: 'Lemon', cursive;
+}
+
+.font-inriaLight {
+  font-family: 'Inria Serif', serif;
+  font-weight: 300;
+}
