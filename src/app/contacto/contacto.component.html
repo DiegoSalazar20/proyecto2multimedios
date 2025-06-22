@@ -2,16 +2,15 @@
 
 <main class="bg-[#B4C8B1] min-h-screen px-4 py-10 md:px-20 text-[#252525] flex flex-col justify-start items-center gap-10 pt-[70px]">
 
-  <!-- Título -->
+
   <header>
     <h1 class="text-3xl md:text-4xl font-bold font-lemon text-center mb-10 md:mb-14 animate__animated animate__fadeInDown">
       Contactos
     </h1>
   </header>
 
-  <!-- Lista de contactos -->
   <section class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl">
-    <div
+    <article
       *ngFor="let contacto of contactos; let i = index"
       [ngClass]="
         'animate__animated ' +
@@ -21,19 +20,18 @@
       class="bg-[#F5C85D] rounded-md shadow-lg flex flex-col justify-between opacity-0"
       style="animation-fill-mode: both;"
     >
-      <div class="p-4">
+      <header class="p-4">
         <h2 class="font-inriaItalic text-lg md:text-xl text-[#252525] leading-snug">
           {{ contacto.nombre }}
         </h2>
-      </div>
-      <div class="bg-[#FAE2A5] px-4 py-2 rounded-b-md text-sm md:text-base font-inriaLight text-[#252525]">
-        {{ contacto.descripcion }}
-        <br>
-        Teléfono: {{ contacto.telefono }}
-        <br>
-        Correo: {{ contacto.correo || 'No disponible' }}
-      </div>
-    </div>
+      </header>
+
+      <section class="bg-[#FAE2A5] px-4 py-2 rounded-b-md text-sm md:text-base font-inriaLight text-[#252525]">
+        <p>{{ contacto.descripcion }}</p>
+        <p>Teléfono: {{ contacto.telefono }}</p>
+        <p>Correo: {{ contacto.correo || 'No disponible' }}</p>
+      </section>
+    </article>
   </section>
 
 </main>
