@@ -56,7 +56,15 @@
       </ul>
     </nav>
 
-    <button class="md:hidden text-3xl text-[#252525]" (click)="abrirMenu()">&#9776;</button>
+    <button
+  class="md:hidden flex flex-col justify-between w-8 h-6"
+  (click)="abrirMenu()"
+  aria-label="Abrir menú"
+>
+  <span class="w-full h-1 bg-[#F2C94C] border border-black transition hover:bg-[#D2AD3D] active:bg-[#F8DB83]"></span>
+  <span class="w-full h-1 bg-[#F2C94C] border border-black transition hover:bg-[#D2AD3D] active:bg-[#F8DB83]"></span>
+  <span class="w-full h-1 bg-[#F2C94C] border border-black transition hover:bg-[#D2AD3D] active:bg-[#F8DB83]"></span>
+</button>
 
     <nav *ngIf="menuAbierto" (animationend)="onAnimacionTerminada()"
       class="fixed inset-0 z-50 text-white flex flex-col justify-between p-6 animate__animated" [ngClass]="{

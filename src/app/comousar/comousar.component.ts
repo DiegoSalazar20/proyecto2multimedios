@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { MenuComponent } from '../menu/menu.component';
 
 @Component({
   selector: 'app-comousar',
-  imports: [],
+  imports: [MenuComponent],
   templateUrl: './comousar.component.html',
   styleUrl: './comousar.component.css'
 })
