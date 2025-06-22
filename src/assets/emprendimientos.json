@@ -1,236 +1,332 @@
 {
-    "categorias": [
-        "Agroturismo",
-        "Productos artesanales",
-        "Turismo vivencial"
-    ],
-    "emprendimientos": [
+  "categorias": [
+    "Agroturismo",
+    "Productos artesanales",
+    "Turismo vivencial"
+  ],
+  "emprendimientos": [
+    {
+      "nombre": "Finca Vialig",
+      "categoria": "Agroturismo",
+      "descripcion": "Giras educativas y formativas en un contexto rural.",
+      "ubicacion": "Pacayitas, Turrialba",
+      "horario": "Martes a Domingo de 8 a.m. a 4 p.m.",
+      "contacto": {
+        "telefono": "8817-5330",
+        "correo": "fincavialigpacayitas@gmail.com",
+        "web": "fincavialig.com"
+      },
+      "precio": "$89",
+      "imagenes": [
         {
-            "nombre": "Finca Vialig",
-            "categoria": "Agroturismo",
-            "descripcion": "Giras educativas y formativas en un contexto rural.",
-            "ubicacion": "Pacayitas, Turrialba",
-            "horario": "Martes a Domingo de 8 a.m. a 4 p.m.",
-            "contacto": {
-                "telefono": "8817-5330",
-                "correo": "fincavialigpacayitas@gmail.com",
-                "web": "fincavialig.com"
-            },
-            "precio": "$89",
-            "imagenes": [
-                "https://res.cloudinary.com/dmc0zws0g/image/upload/v1750528294/multimedios/vialing-1.jpg",
-                "https://res.cloudinary.com/dmc0zws0g/image/upload/v1750528294/multimedios/vialing-2.jpg",
-                "https://res.cloudinary.com/dmc0zws0g/image/upload/v1750528294/multimedios/vialing-3.jpg",
-                "https://res.cloudinary.com/dmc0zws0g/image/upload/v1750528294/multimedios/vialing-4.jpg"
-            ]
+          "url_image": "https://res.cloudinary.com/dmc0zws0g/image/upload/v1750528294/multimedios/vialing-1.jpg",
+          "alt": "Imagen de Vialing 1"
         },
         {
-            "nombre": "Finca Dulce Doña Tanita",
-            "categoria": "Agroturismo",
-            "descripcion": "Actividad productiva orgánica en la forma tradicional.",
-            "ubicacion": "San Pablo de Tres Equis, Turrialba",
-            "horario": "Lunes a Viernes de 9 a.m. a 4 p.m.",
-            "contacto": {
-                "telefono": "2554-1141",
-                "correo": "",
-                "web": ""
-            },
-            "precio": "¢8.000",
-            "imagenes": [
-                "https://res.cloudinary.com/dmc0zws0g/image/upload/v1750529297/multimedios/Dulce-Donna-1_uvkshe.jpg",
-                "https://res.cloudinary.com/dmc0zws0g/image/upload/v1750529299/multimedios/Dulce-Donna-3_yrbma2.jpg",
-                "https://res.cloudinary.com/dmc0zws0g/image/upload/v1750529297/multimedios/Dulce-Donna-2_yntwwy.jpg",
-                "https://res.cloudinary.com/dmc0zws0g/image/upload/v1750529299/multimedios/Dulce-Donna-3_yrbma2.jpg"
-            ]
+          "url_image": "https://res.cloudinary.com/dmc0zws0g/image/upload/v1750528294/multimedios/vialing-2.jpg",
+          "alt": "Imagen de Vialing 2"
         },
         {
-            "nombre": "Finca Los Helechos",
-            "categoria": "Agroturismo",
-            "descripcion": "Finca Integral con experiencia educativa.",
-            "ubicacion": "Pavones de Turrialba",
-            "horario": "Lunes, Martes, Sábado y Domingo de 7a.m. a 4 p.m.",
-            "contacto": {
-                "telefono": "8704-5547",
-                "correo": "flory08@gmail.com",
-                "web": ""
-            },
-            "precio": "¢4.000",
-            "imagenes": [
-                "",
-                "",
-                "",
-                ""
-            ]
+          "url_image": "https://res.cloudinary.com/dmc0zws0g/image/upload/v1750528294/multimedios/vialing-3.jpg",
+          "alt": "Imagen de Vialing 3"
         },
         {
-            "nombre": "Chiles Mery",
-            "categoria": "Productos artesanales",
-            "descripcion": "Experiencia en siembra, cosecha de chile jalapeño y elaboración de chileras.",
-            "ubicacion": "Pacuare, Tres Equis",
-            "horario": "Miércoles a Domingo de 9 a.m. a 5 p.m.",
-            "contacto": {
-                "telefono": "2531-5128",
-                "correo": "jsalmeron10de12@gmail.com",
-                "web": ""
-            },
-            "precio": "¢5.000",
-            "imagenes": [
-                "",
-                "",
-                "",
-                ""
-            ]
-        },
-        {
-            "nombre": "La Cosecha del Abuelo",
-            "categoria": "Productos artesanales",
-            "descripcion": "Elaboración de jaleas y licores.",
-            "ubicacion": "Guayabo, Turrialba",
-            "horario": "Lunes a Jueves de 9 a.m. a 4 p.m.",
-            "contacto": {
-                "telefono": "8955-4759",
-                "correo": "",
-                "web": ""
-            },
-            "precio": "¢5.000",
-            "imagenes": [
-                "",
-                "",
-                "",
-                ""
-            ]
-        },
-        {
-            "nombre": "Productos La Niña Yin",
-            "categoria": "Productos artesanales",
-            "descripcion": "Productos a base de sal, azúcar, dulce y vinagre con hierbas y especies naturales.",
-            "ubicacion": "Sitio Mata, frente a la plaza de deportes",
-            "horario": "Lunes a Viernes de 9 a.m a 4 p.m.",
-            "contacto": {
-                "telefono": "8529-1713",
-                "correo": "llaraya64@gmail.com",
-                "web": ""
-            },
-            "precio": "$10",
-            "imagenes": [
-                "",
-                "",
-                "",
-                ""
-            ]
-        },
-        {
-            "nombre": "Ugrosanta Rural Tours",
-            "categoria": "Turismo vivencial",
-            "descripcion": "Tour sobre comunidad, costumbres y producción de queso Turrialba.",
-            "ubicacion": "Santa Cruz, Turrialba",
-            "horario": "Lunes a Domingo de 7 a.m. a 4 p.m.",
-            "contacto": {
-                "telefono": "7242-1787",
-                "correo": "ugrosanta05@gmail.com",
-                "web": ""
-            },
-            "precio": "¢30.000",
-            "imagenes": [
-                "",
-                "",
-                "",
-                ""
-            ]
-        },
-        {
-            "nombre": "Tour del Café Naturalba",
-            "categoria": "Turismo vivencial",
-            "descripcion": "Proceso completo de producción de café: recolección, tueste y degustación.",
-            "ubicacion": "Altos de Jicotea, San Rafael de Tayutic, Turrialba",
-            "horario": "Lunes a Domingo de 7 a.m. a 4 p.m.",
-            "contacto": {
-                "telefono": "8474-5609",
-                "correo": "turricafe@gmail.com",
-                "web": ""
-            },
-            "precio": "¢4.000",
-            "imagenes": [
-                "",
-                "",
-                "",
-                ""
-            ]
-        },
-        {
-            "nombre": "Morpho",
-            "categoria": "Turismo vivencial",
-            "descripcion": "Cría e interacción con mariposas en el mariposario.",
-            "ubicacion": "Carretera a Mollejones, Turrialba",
-            "horario": "Lunes a Sábado de 9 a.m. a 2 p.m.",
-            "contacto": {
-                "telefono": "2551-7482",
-                "correo": "hogardemariposas@gmail.com",
-                "web": ""
-            },
-            "precio": "¢5.000",
-            "imagenes": [
-                "",
-                "",
-                "",
-                ""
-            ]
+          "url_image": "https://res.cloudinary.com/dmc0zws0g/image/upload/v1750528294/multimedios/vialing-4.jpg",
+          "alt": "Imagen de Vialing 4"
         }
-    ],
-    "contactos_adicionales": [
+      ]
+    },
+    {
+      "nombre": "Finca Dulce Doña Tanita",
+      "categoria": "Agroturismo",
+      "descripcion": "Actividad productiva orgánica en la forma tradicional.",
+      "ubicacion": "San Pablo de Tres Equis, Turrialba",
+      "horario": "Lunes a Viernes de 9 a.m. a 4 p.m.",
+      "contacto": {
+        "telefono": "2554-1141",
+        "correo": "",
+        "web": ""
+      },
+      "precio": "¢8.000",
+      "imagenes": [
         {
-            "nombre": "Elmer Salazar Rojas",
-            "descripcion": "Gestor de Turismo, Municipalidad de Turrialba",
-            "telefono": "2556 0231 ext. 112",
-            "correo": "esalazar@muniturrialba.go.cr"
+          "url_image": "https://res.cloudinary.com/dmc0zws0g/image/upload/v1750529297/multimedios/Dulce-Donna-1_uvkshe.jpg",
+          "alt": "Imagen de Dulce Donna 1"
         },
         {
-            "nombre": "Rolando Marín Alvarado",
-            "descripcion": "Coordinador Nacional OVOP COSTA RICA",
-            "telefono": "2549-1201",
-            "correo": "rmarin@meic.go.cr"
+          "url_image": "https://res.cloudinary.com/dmc0zws0g/image/upload/v1750529299/multimedios/Dulce-Donna-3_yrbma2.jpg",
+          "alt": "Imagen de Dulce Donna 3"
         },
         {
-            "nombre": "Arellys Durán Rodríguez",
-            "descripcion": "Directora, Agencia para el Desarrollo",
-            "telefono": "2556-6917 ext. 3006",
-            "correo": "aduranrodriguez@ina.cr"
+          "url_image": "https://res.cloudinary.com/dmc0zws0g/image/upload/v1750529297/multimedios/Dulce-Donna-2_yntwwy.jpg",
+          "alt": "Imagen de Dulce Donna 2"
         },
         {
-            "nombre": "Lisbeth Barboza González",
-            "descripcion": "Vice Alcaldesa de Turrialba",
-            "telefono": "2556-1586",
-            "correo": ""
-        },
-        {
-            "nombre": "Juan Carlos Cubero Hernandez",
-            "descripcion": "Jefe Subregional, INDER, Territorio Turrialba-Jiménez",
-            "telefono": "2556-1443",
-            "correo": "jcubero@inder.go.cr"
-        },
-        {
-            "nombre": "Juan Miguel León León",
-            "descripcion": "Producción Agrícola",
-            "telefono": "6455-5164",
-            "correo": ""
-        },
-        {
-            "nombre": "Carlos Seas Tencio",
-            "descripcion": "Extencionista MAG-Turrialba",
-            "telefono": "2556-0185",
-            "correo": "cseas@mag.go.cr"
-        },
-        {
-            "nombre": "María Rosa Céspedes Martínez",
-            "descripcion": "",
-            "telefono": "",
-            "correo": "fincagudikaho@gmail.com"
-        },
-        {
-            "nombre": "Luis Mario Portuguéz Solano",
-            "descripcion": "Vicealcalde Municipalidad de Jiménez",
-            "telefono": "2532-2061",
-            "correo": ""
+          "url_image": "https://res.cloudinary.com/dmc0zws0g/image/upload/v1750529299/multimedios/Dulce-Donna-3_yrbma2.jpg",
+          "alt": "Imagen de Dulce Donna 3"
         }
-    ]
+      ]
+    },
+    {
+      "nombre": "Finca Los Helechos",
+      "categoria": "Agroturismo",
+      "descripcion": "Finca Integral con experiencia educativa.",
+      "ubicacion": "Pavones de Turrialba",
+      "horario": "Lunes, Martes, Sábado y Domingo de 7a.m. a 4 p.m.",
+      "contacto": {
+        "telefono": "8704-5547",
+        "correo": "flory08@gmail.com",
+        "web": ""
+      },
+      "precio": "¢4.000",
+      "imagenes": [
+        {
+          "url_image": "https://res.cloudinary.com/dmc0zws0g/image/upload/v1750531768/multimedios/helecho-1_pnw4l4.jpg",
+          "alt": "Imagen de Helecho 1"
+        },
+        {
+          "url_image": "https://res.cloudinary.com/dmc0zws0g/image/upload/v1750531767/multimedios/helecho-2_okhyka.jpg",
+          "alt": "Imagen de Helecho 2"
+        },
+        {
+          "url_image": "https://res.cloudinary.com/dmc0zws0g/image/upload/v1750531767/multimedios/helecho-3_yumkak.jpg",
+          "alt": "Imagen de Helecho 3"
+        },
+        {
+          "url_image": "https://res.cloudinary.com/dmc0zws0g/image/upload/v1750531766/multimedios/helecho-4_silbtv.jpg",
+          "alt": "Imagen de Helecho 4"
+        }
+      ]
+    },
+    {
+      "nombre": "Chiles Mery",
+      "categoria": "Productos artesanales",
+      "descripcion": "Experiencia en siembra, cosecha de chile jalapeño y elaboración de chileras.",
+      "ubicacion": "Pacuare, Tres Equis",
+      "horario": "Miércoles a Domingo de 9 a.m. a 5 p.m.",
+      "contacto": {
+        "telefono": "2531-5128",
+        "correo": "jsalmeron10de12@gmail.com",
+        "web": ""
+      },
+      "precio": "¢5.000",
+      "imagenes": [
+        {
+          "url_image": "https://res.cloudinary.com/dmc0zws0g/image/upload/v1750544470/multimedios/chiles-1_oenrsw.jpg",
+          "alt": "Imagen de Chiles 1"
+        },
+        {
+          "url_image": "https://res.cloudinary.com/dmc0zws0g/image/upload/v1750544468/multimedios/chile-4_welfwy.jpg",
+          "alt": "Imagen de Chiles 4"
+        },
+        {
+          "url_image": "https://res.cloudinary.com/dmc0zws0g/image/upload/v1750544467/multimedios/chile-2_qxbnts.jpg",
+          "alt": "Imagen de Chiles 2"
+        },
+        {
+          "url_image": "https://res.cloudinary.com/dmc0zws0g/image/upload/v1750544467/multimedios/chile-3_bs8c1o.jpg",
+          "alt": "Imagen de Chiles 3"
+        }
+      ]
+    },
+    {
+      "nombre": "La Cosecha del Abuelo",
+      "categoria": "Productos artesanales",
+      "descripcion": "Elaboración de jaleas y licores.",
+      "ubicacion": "Guayabo, Turrialba",
+      "horario": "Lunes a Jueves de 9 a.m. a 4 p.m.",
+      "contacto": {
+        "telefono": "8955-4759",
+        "correo": "",
+        "web": ""
+      },
+      "precio": "¢5.000",
+      "imagenes": [
+        {
+          "url_image": "https://res.cloudinary.com/dmc0zws0g/image/upload/v1750546796/multimedios/Jalea-1_w97qyq.jpg",
+          "alt": "Imagen de Jalea 1"
+        },
+        {
+          "url_image": "https://res.cloudinary.com/dmc0zws0g/image/upload/v1750546796/multimedios/Jalea-2_gv6gy1.jpg",
+          "alt": "Imagen de Jalea 2"
+        },
+        {
+          "url_image": "https://res.cloudinary.com/dmc0zws0g/image/upload/v1750546797/multimedios/Jalea-3_p6vsqk.jpg",
+          "alt": "Imagen de Jalea 3"
+        },
+        {
+          "url_image": "https://res.cloudinary.com/dmc0zws0g/image/upload/v1750546799/multimedios/Jalea-4_z8bnch.jpg",
+          "alt": "Imagen de Jalea 4"
+        }
+      ]
+    },
+    {
+      "nombre": "Productos La Niña Yin",
+      "categoria": "Productos artesanales",
+      "descripcion": "Productos a base de sal, azúcar, dulce y vinagre con hierbas y especies naturales.",
+      "ubicacion": "Sitio Mata, frente a la plaza de deportes",
+      "horario": "Lunes a Viernes de 9 a.m a 4 p.m.",
+      "contacto": {
+        "telefono": "8529-1713",
+        "correo": "llaraya64@gmail.com",
+        "web": ""
+      },
+      "precio": "$10",
+      "imagenes": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "nombre": "Ugrosanta Rural Tours",
+      "categoria": "Turismo vivencial",
+      "descripcion": "Tour sobre comunidad, costumbres y producción de queso Turrialba.",
+      "ubicacion": "Santa Cruz, Turrialba",
+      "horario": "Lunes a Domingo de 7 a.m. a 4 p.m.",
+      "contacto": {
+        "telefono": "7242-1787",
+        "correo": "ugrosanta05@gmail.com",
+        "web": ""
+      },
+      "precio": "¢30.000",
+      "imagenes": [
+        {
+          "url_image": "",
+          "alt": "Imagen 1"
+        },
+        {
+          "url_image": "",
+          "alt": "Imagen 2"
+        },
+        {
+          "url_image": "",
+          "alt": "Imagen 3"
+        },
+        {
+          "url_image": "",
+          "alt": "Imagen 4"
+        }
+      ]
+    },
+    {
+      "nombre": "Tour del Café Naturalba",
+      "categoria": "Turismo vivencial",
+      "descripcion": "Proceso completo de producción de café: recolección, tueste y degustación.",
+      "ubicacion": "Altos de Jicotea, San Rafael de Tayutic, Turrialba",
+      "horario": "Lunes a Domingo de 7 a.m. a 4 p.m.",
+      "contacto": {
+        "telefono": "8474-5609",
+        "correo": "turricafe@gmail.com",
+        "web": ""
+      },
+      "precio": "¢4.000",
+      "imagenes": [
+        {
+          "url_image": "",
+          "alt": "Imagen 1"
+        },
+        {
+          "url_image": "",
+          "alt": "Imagen 2"
+        },
+        {
+          "url_image": "",
+          "alt": "Imagen 3"
+        },
+        {
+          "url_image": "",
+          "alt": "Imagen 4"
+        }
+      ]
+    },
+    {
+      "nombre": "Morpho",
+      "categoria": "Turismo vivencial",
+      "descripcion": "Cría e interacción con mariposas en el mariposario.",
+      "ubicacion": "Carretera a Mollejones, Turrialba",
+      "horario": "Lunes a Sábado de 9 a.m. a 2 p.m.",
+      "contacto": {
+        "telefono": "2551-7482",
+        "correo": "hogardemariposas@gmail.com",
+        "web": ""
+      },
+      "precio": "¢5.000",
+      "imagenes": [
+        {
+          "url_image": "",
+          "alt": "Imagen 1"
+        },
+        {
+          "url_image": "",
+          "alt": "Imagen 2"
+        },
+        {
+          "url_image": "",
+          "alt": "Imagen 3"
+        },
+        {
+          "url_image": "",
+          "alt": "Imagen 4"
+        }
+      ]
+    }
+  ],
+  "contactos_adicionales": [
+    {
+      "nombre": "Elmer Salazar Rojas",
+      "descripcion": "Gestor de Turismo, Municipalidad de Turrialba",
+      "telefono": "2556 0231 ext. 112",
+      "correo": "esalazar@muniturrialba.go.cr"
+    },
+    {
+      "nombre": "Rolando Marín Alvarado",
+      "descripcion": "Coordinador Nacional OVOP COSTA RICA",
+      "telefono": "2549-1201",
+      "correo": "rmarin@meic.go.cr"
+    },
+    {
+      "nombre": "Arellys Durán Rodríguez",
+      "descripcion": "Directora, Agencia para el Desarrollo",
+      "telefono": "2556-6917 ext. 3006",
+      "correo": "aduranrodriguez@ina.cr"
+    },
+    {
+      "nombre": "Lisbeth Barboza González",
+      "descripcion": "Vice Alcaldesa de Turrialba",
+      "telefono": "2556-1586",
+      "correo": ""
+    },
+    {
+      "nombre": "Juan Carlos Cubero Hernandez",
+      "descripcion": "Jefe Subregional, INDER, Territorio Turrialba-Jiménez",
+      "telefono": "2556-1443",
+      "correo": "jcubero@inder.go.cr"
+    },
+    {
+      "nombre": "Juan Miguel León León",
+      "descripcion": "Producción Agrícola",
+      "telefono": "6455-5164",
+      "correo": ""
+    },
+    {
+      "nombre": "Carlos Seas Tencio",
+      "descripcion": "Extencionista MAG-Turrialba",
+      "telefono": "2556-0185",
+      "correo": "cseas@mag.go.cr"
+    },
+    {
+      "nombre": "María Rosa Céspedes Martínez",
+      "descripcion": "",
+      "telefono": "",
+      "correo": "fincagudikaho@gmail.com"
+    },
+    {
+      "nombre": "Luis Mario Portuguéz Solano",
+      "descripcion": "Vicealcalde Municipalidad de Jiménez",
+      "telefono": "2532-2061",
+      "correo": ""
+    }
+  ]
 }
