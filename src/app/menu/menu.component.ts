@@ -9,6 +9,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './menu.component.css'
 })
 export class MenuComponent {
+  menuAbierto = false;
+cerrandoMenu = false;
+animacionEntrada = false;
+
   rutaActual: string = '';
 
   constructor(private router: Router) {
@@ -20,4 +24,25 @@ export class MenuComponent {
   redirigir(ruta: string) {
     this.router.navigate([ruta]);
   }
+
+  abrirMenu() {
+  this.menuAbierto = true;
+  this.cerrandoMenu = false;
+  // Activar animación de entrada en el siguiente ciclo del DOM
+  setTimeout(() => {
+    this.animacionEntrada = true;
+  }, 10);
+}
+
+cerrarMenu() {
+  this.animacionEntrada = false;
+  this.cerrandoMenu = true;
+}
+
+onAnimacionTerminada() {
+  if (this.cerrandoMenu) {
+    this.menuAbierto = false;
+    this.cerrandoMenu = false;
+  }
+}
 }
