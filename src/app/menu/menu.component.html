@@ -1,48 +1,87 @@
-<nav class="bg-[#F5F5DC] px-6 py-3 shadow-md flex items-center justify-between">
-  <img src="https://i.ibb.co/4k3W8Tz/Logonegro.png" alt="Logo Intermontañas" class="h-10">
+<header class="bg-[#F5F5DC] shadow-md fixed top-0 w-screen z-50">
+  <div class="container mx-auto px-6 py-3 flex items-center justify-between">
 
-  <ul class="hidden md:flex space-x-6 text-[#252525] font-medium">
-    <li>
-      <a (click)="redirigir('/')" [ngClass]="{
-           'bg-[#8CC63F] px-3 py-1 rounded-full': rutaActual === '/',
-           'hover:underline': rutaActual !== '/'
-         }" class="transition cursor-pointer">
-        Inicio
-      </a>
-    </li>
-    <li>
-      <a (click)="redirigir('/acerca')" [ngClass]="{
-           'bg-[#8CC63F] px-3 py-1 rounded-full': rutaActual.includes('/acerca'),
-           'hover:underline': !rutaActual.includes('/acerca')
-         }" class="transition cursor-pointer">
-        Acerca
-      </a>
-    </li>
-    <li>
-      <a (click)="redirigir('/comousar')" [ngClass]="{
-           'bg-[#8CC63F] px-3 py-1 rounded-full': rutaActual.includes('/como-usar'),
-           'hover:underline': !rutaActual.includes('/como-usar')
-         }" class="transition cursor-pointer">
-        Cómo usar
-      </a>
-    </li>
-    <li>
-      <a (click)="redirigir('/emprendimientos')" [ngClass]="{
-           'bg-[#8CC63F] px-3 py-1 rounded-full': rutaActual.includes('/emprendimientos'),
-           'hover:underline': !rutaActual.includes('/emprendimientos')
-         }" class="transition cursor-pointer">
-        Emprendimientos
-      </a>
-    </li>
-    <li>
-      <a (click)="redirigir('/contactos')" [ngClass]="{
-           'bg-[#8CC63F] px-3 py-1 rounded-full': rutaActual.includes('/contactos'),
-           'hover:underline': !rutaActual.includes('/contactos')
-         }" class="transition cursor-pointer">
-        Contactos
-      </a>
-    </li>
-  </ul>
+    <a (click)="redirigir('/')" class="cursor-pointer">
+      <img src="https://i.ibb.co/4k3W8Tz/Logonegro.png" alt="Logo Intermontañas" class="h-10">
+    </a>
 
-  <button class="md:hidden text-3xl text-[#252525]">&#9776;</button>
-</nav>
+    <nav class="hidden md:block">
+      <ul class="flex items-center gap-x-8 text-[#252525] font-medium">
+
+        <li>
+          <a (click)="redirigir('/')" [ngClass]="{
+            'bg-[#8CC63F] px-3 py-1 rounded-full': rutaActual === '/',
+            'hover:underline': rutaActual !== '/'
+          }" class="transition cursor-pointer">
+            Inicio
+          </a>
+        </li>
+
+        <li>
+          <a (click)="redirigir('/acerca')" [ngClass]="{
+            'bg-[#8CC63F] px-3 py-1 rounded-full': rutaActual.includes('/acerca'),
+            'hover:underline': !rutaActual.includes('/acerca')
+          }" class="transition cursor-pointer">
+            Acerca
+          </a>
+        </li>
+
+        <li>
+          <a (click)="redirigir('/comousar')" [ngClass]="{
+            'bg-[#8CC63F] px-3 py-1 rounded-full': rutaActual.includes('/comousar'),
+            'hover:underline': !rutaActual.includes('/comousar')
+          }" class="transition cursor-pointer">
+            Cómo usar
+          </a>
+        </li>
+
+        <li>
+          <a (click)="redirigir('/emprendimientos')" [ngClass]="{
+            'bg-[#8CC63F] px-3 py-1 rounded-full': rutaActual.includes('/emprendimientos'),
+            'hover:underline': !rutaActual.includes('/emprendimientos')
+          }" class="transition cursor-pointer">
+            Emprendimientos
+          </a>
+        </li>
+
+        <li>
+          <a (click)="redirigir('/contactos')" [ngClass]="{
+            'bg-[#8CC63F] px-3 py-1 rounded-full': rutaActual.includes('/contactos'),
+            'hover:underline': !rutaActual.includes('/contactos')
+          }" class="transition cursor-pointer">
+            Contactos
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <button class="md:hidden text-3xl text-[#252525]" (click)="abrirMenu()">&#9776;</button>
+
+    <nav *ngIf="menuAbierto" (animationend)="onAnimacionTerminada()"
+      class="fixed inset-0 z-50 text-white flex flex-col justify-between p-6 animate__animated" [ngClass]="{
+       'animate__slideInRight': animacionEntrada && !cerrandoMenu,
+       'animate__slideOutRight': cerrandoMenu
+     }"
+      [ngStyle]="{ 'background-image': 'url(https://i.ibb.co/nN29cTKD/fondo.jpg)', 'background-size': 'cover', 'background-position': 'center' }">
+
+      <div class="absolute inset-0 bg-[#628D2A] opacity-80 z-0"></div>
+
+      <div class="relative z-10 flex justify-between items-center">
+        <img src="https://i.ibb.co/4k3W8Tz/Logonegro.png" alt="Logo" class="h-10">
+        <button class="text-4xl font-bold" (click)="cerrarMenu()">&times;</button>
+      </div>
+
+      <ul
+        class="relative z-10 flex flex-col items-center justify-center flex-grow gap-6 text-2xl font-bold font-inriaLight">
+        <li><a (click)="redirigir('/'); cerrarMenu()">Inicio</a></li>
+        <li><a (click)="redirigir('/emprendimientos'); cerrarMenu()">Emprendimientos</a></li>
+        <li><a (click)="redirigir('/comousar'); cerrarMenu()">Cómo usar</a></li>
+        <li><a (click)="redirigir('/contactos'); cerrarMenu()">Contacto</a></li>
+        <li><a (click)="redirigir('/acerca'); cerrarMenu()">Acerca</a></li>
+      </ul>
+
+    </nav>
+
+  </div>
+</header>
