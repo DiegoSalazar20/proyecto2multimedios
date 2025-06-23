@@ -1,16 +1,43 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MenuComponent } from '../menu/menu.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+
+interface Contenido {
+  nombre: string;
+  url_image: string;
+  alt: string;
+}
 
 @Component({
   selector: 'app-inicio',
-  imports: [MenuComponent],
+  imports: [MenuComponent, CommonModule, HttpClientModule],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css'
 })
-export class InicioComponent {
+export class InicioComponent implements OnInit{
 
-  constructor(private router: Router) {}
+  contenido: Contenido[] = [];
+
+  constructor(private router: Router, private http: HttpClient) {}
+
+ ngOnInit(): void {
+  this.http.get<any>('assets/emprendimientos.json').subscribe((data) => {
+    if (data?.contenidos) {
+      const inicio = data.contenidos.find((c: Contenido) => c.nombre === 'inicio');
+      if (inicio) {
+        this.contenido = [inicio];
+        console.log('Contenido cargado:', this.contenido);
+      } else {
+        console.error('No se encontró el contenido "inicio" en el JSON.');
+      }
+    } else {
+      console.error('contenidos no encontrados en el JSON.');
+    }
+  });
+}
+
 
   RedirigirEmprendimientos() {
     this.router.navigate(['/emprendimientos']);
