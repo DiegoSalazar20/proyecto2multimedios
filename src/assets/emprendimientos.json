@@ -173,40 +173,52 @@
       },
       "precio": "$10",
       "imagenes": [
-        "",
-        "",
-        "",
-        ""
+        {
+          "url_image": "https://i.ibb.co/TqR7gQmf/Whats-App-Image-2025-06-22-at-2-57-14-PM.jpg",
+          "alt": "Logo de La niña Yin"
+        },
+        {
+          "url_image": "https://i.ibb.co/DDRdKbLT/Whats-App-Image-2025-06-22-at-2-57-15-PM.jpg",
+          "alt": "Foto de cuatro productos del emprendimiento la niña yin, en un empaque pequeño se puede ver sal, hay dos empaques grandes, uno de azúcar cruda y otra de azúcar y un evnvase de vidrio con vinagre"
+        },
+        {
+          "url_image": "https://i.ibb.co/tMbw0h03/Whats-App-Image-2025-06-22-at-2-57-14-PM-2.jpg",
+          "alt": "Pastel con cubierta y relleno de chocolate, hecho con productos del emprendimiento la niña yin."
+        },
+        {
+          "url_image": "https://i.ibb.co/7xfhTg1f/Whats-App-Image-2025-06-22-at-2-57-14-PM-1.jpg",
+          "alt": "Imagen de productos de la niña yin, en los cuales se puede ver el vinagre en una botella, y en bolsas separadas el azúcar, azúcar cruda y la sal, también hay un texto que dice que sus productos se pueden encontrar en la distribuidora Bogantes"
+        }
       ]
     },
     {
-      "nombre": "Ugrosanta Rural Tours",
+      "nombre": "Agro-Ecoturismo Yhamorë",
       "categoria": "Turismo vivencial",
-      "descripcion": "Tour sobre comunidad, costumbres y producción de queso Turrialba.",
-      "ubicacion": "Santa Cruz, Turrialba",
-      "horario": "Lunes a Domingo de 7 a.m. a 4 p.m.",
+      "descripcion": "es un proyecto familiar en la Comunidad Colonia de Guayabo, el cual pretende con prácticas sostenibles con el ambiente, dar a conocer nuestra comunidad.",
+      "ubicacion": "900mts al Noroeste, del CEN Colonia de Guayabo",
+      "horario": "Lunes a Domingo de 7 a.m a 5p.m.",
       "contacto": {
-        "telefono": "7242-1787",
-        "correo": "ugrosanta05@gmail.com",
+        "telefono": "8309-3452",
+        "correo": "agroeyhamore@gmail.com",
         "web": ""
       },
       "precio": "¢30.000",
       "imagenes": [
         {
-          "url_image": "",
-          "alt": "Imagen 1"
+          "url_image": "https://i.ibb.co/xS0LxjYS/Whats-App-Image-2025-06-22-at-3-21-46-PM.jpg",
+          "alt": "Logo de Agro Ecoturismo Yhamorë"
         },
         {
-          "url_image": "",
-          "alt": "Imagen 2"
+          "url_image": "https://i.ibb.co/5WjF6YJb/Whats-App-Image-2025-06-22-at-3-22-06-PM.jpg",
+          "alt": "Imgane del volcán Turrialba con nubes arriba tomada desde abajo en un plano con mucho césped y piedras"
         },
         {
-          "url_image": "",
-          "alt": "Imagen 3"
+          "url_image": "https://i.ibb.co/pvRkjsTb/Whats-App-Image-2025-06-22-at-3-21-58-PM.jpg",
+          "alt": "Imagen de tres tortillas de queso puestas sobre hojas de tamal en un plato redondo de madera"
         },
         {
-          "url_image": "",
-          "alt": "Imagen 4"
+          "url_image": "https://i.ibb.co/3YdQSf15/Whats-App-Image-2025-06-22-at-3-22-14-PM.jpg",
+          "alt": "Imagen de una rana de ojos rojos subida en una rama delgada de color verde con muchas hojas y árboles de fondo"
         }
       ]
     },
@@ -224,20 +236,20 @@
       "precio": "¢4.000",
       "imagenes": [
         {
-          "url_image": "",
-          "alt": "Imagen 1"
+          "url_image": "https://i.ibb.co/ksvp4ccX/Whats-App-Image-2025-06-22-at-3-07-47-PM-1.jpg",
+          "alt": "Dos bolsas de café de color blanco y una bolsa más grande de café color negra con imágenes de aves en cada una, la de la izquierda dice la frase café tradición, la del medio dice café sostenible y la de la derecha dice café natural"
         },
         {
-          "url_image": "",
-          "alt": "Imagen 2"
+          "url_image": "https://i.ibb.co/wZRM7f96/Whats-App-Image-2025-06-22-at-3-07-48-PM.jpg",
+          "alt": "Saco de color blanco lleno de granos de café color rojo con un tronco de un árbol al fondo y muchas matas de café"
         },
         {
-          "url_image": "",
-          "alt": "Imagen 3"
+          "url_image": "https://i.ibb.co/1JnCH052/Whats-App-Image-2025-06-22-at-3-07-48-PM-1.jpg",
+          "alt": "Tarro para guardar café puesto dentro de una carreta que tiene muchos granos de café, un saco y una llanta."
         },
         {
-          "url_image": "",
-          "alt": "Imagen 4"
+          "url_image": "https://i.ibb.co/d0vz1tKZ/Whats-App-Image-2025-06-22-at-3-07-47-PM.jpg",
+          "alt": "Imagen de 3 productos de chocolate con café, uno rojo, otro gris y otro amarillo, el rojo dice 70% cacao, el gris dice 100% cacao puro y el amarillo dice chocolate negro 70 % cacao puro"
         }
       ]
     },
@@ -255,20 +267,20 @@
       "precio": "¢5.000",
       "imagenes": [
         {
-          "url_image": "",
-          "alt": "Imagen 1"
+          "url_image": "https://i.ibb.co/G4VQv0pJ/Whats-App-Image-2025-06-22-at-3-13-04-PM.jpg",
+          "alt": "Logo de Hogade de mariposas con un texto pequeño que dice volando por el mundo"
         },
         {
-          "url_image": "",
-          "alt": "Imagen 2"
+          "url_image": "https://i.ibb.co/ynDCX6sZ/Whats-App-Image-2025-06-22-at-3-13-05-PM-1.jpg",
+          "alt": "Imagen de una maripos de alas delgadas de color rojo en la parte de abajo y negro en la parte de arriba posada sobre una hoja."
         },
         {
-          "url_image": "",
-          "alt": "Imagen 3"
+          "url_image": "https://i.ibb.co/RT81MSYw/Whats-App-Image-2025-06-22-at-3-13-05-PM.jpg",
+          "alt": "Imagen de unos aretes de oro con un corazón amarillo puestos sobre un cartón blanco que dice Hogar de mariposas volando por el mundo y las redes sociales del emprendimiento"
         },
         {
-          "url_image": "",
-          "alt": "Imagen 4"
+          "url_image": "https://i.ibb.co/ccr0q7C9/Whats-App-Image-2025-06-22-at-3-13-04-PM-1.jpg",
+          "alt": "Imagen de una mariposa negra con puntos amarillos en las orillas de las alas, posada sobre una flor de color amarillo con hojas verdes de otras plantas de fondo"
         }
       ]
     }
@@ -327,6 +339,28 @@
       "descripcion": "Vicealcalde Municipalidad de Jiménez",
       "telefono": "2532-2061",
       "correo": ""
+    }
+  ],
+  "contenidos": [
+    {
+      "nombre": "inicio",
+      "url_image": "https://i.ibb.co/v6RzR7QZ/paginainicio.png",
+      "alt": "Imagen de la página de inicio del sitio web con vista panorámica de Turrialba"
+    },
+    {
+      "nombre": "acerca",
+      "url_image": "https://i.ibb.co/dsmL6Js1/acerca.png",
+      "alt": "Imagen de la sección Acerca de, que presenta información sobre los emprendimientos locales"
+    },
+    {
+      "nombre": "logo_blanco",
+      "url_image": "https://i.ibb.co/Xxj0xFhN/Logo-2.png",
+      "alt": "Logo del proyecto en versión blanco sobre fondo transparente"
+    },
+    {
+      "nombre": "logo_negro",
+      "url_image": "https://i.ibb.co/4k3W8Tz/Logonegro.png",
+      "alt": "Logo del proyecto en color negro sobre fondo transparente"
     }
   ]
 }
