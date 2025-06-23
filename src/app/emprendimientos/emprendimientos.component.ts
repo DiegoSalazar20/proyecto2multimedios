@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {MenuComponent} from '../menu/menu.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import {CommonModule} from '@angular/common';
+import {InViewportDirective} from '../../utils/in-viewport.directive';
+import { FormsModule } from '@angular/forms';
 
 export interface Emprendimiento {
   nombre: string;
@@ -27,13 +29,14 @@ export interface Imagen {
 
 @Component({
   selector: 'app-emprendimientos',
-  imports: [CommonModule, HttpClientModule, MenuComponent],
+  imports: [CommonModule, HttpClientModule, MenuComponent, InViewportDirective, FormsModule],
   templateUrl: './emprendimientos.component.html',
   styleUrl: './emprendimientos.component.css'
 })
 export class EmprendimientosComponent implements OnInit {
   emprendimientos: Emprendimiento[] = [];
-
+  filtrados: Emprendimiento[] = [];
+  busqueda: string = '';
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
@@ -45,6 +48,13 @@ export class EmprendimientosComponent implements OnInit {
         console.error('contactos_adicionales no encontrados en el JSON');
       }
     });
+  }
+
+  filtrar(): void {
+    const termino = this.busqueda.toLowerCase();
+    this.filtrados = this.emprendimientos.filter((e) =>
+      e.nombre.toLowerCase().includes(termino)
+    );
   }
 
 }

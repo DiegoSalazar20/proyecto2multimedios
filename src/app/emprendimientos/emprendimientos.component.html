@@ -1,20 +1,43 @@
 <app-menu/>
-<main class="bg-[#B4C8B1] min-h-screen px-4 py-10 md:px-20 text-[#252525] flex flex-col justify-center items-center pt-[70px]">
+<main class="bg-[#B4C8B1] h-full px-4 py-10 md:px-20 text-[#252525] flex flex-col justify-center items-center pt-[70px]">
 
   <!-- Título -->
-  <header>
-    <h1 class="text-3xl md:text-4xl font-bold font-lemon text-center mb-10 md:mb-14 animate__animated animate__fadeInDown">
+  <header class="">
+    <div class="absolute top-20 right-4 w-64">
+      <div class="relative">
+        <input
+          type="text"
+          placeholder="Buscar..."
+          [(ngModel)]="busqueda"
+          (input)="filtrar()"
+          class="w-full pl-4 pr-10 py-2 rounded-2xl bg-gray-200 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2"
+        />
+        <div class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
+          <svg
+            class="w-5 h-5 text-black"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <h1 class="text-3xl md:text-4xl font-bold font-lemon text-center mb-10 mt-15 md:10 md:mb-14 animate__animated animate__fadeInDown">
       Emprendimientos
     </h1>
   </header>
 
   <!-- Lista de de emprendimientos -->
   <section class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl">
-      <div *ngFor="let emprendimiento of emprendimientos; let i = index"
-           [ngClass]="
-        'animate__animated ' + 'animate__fadeInLeft'+
-        ' animate__delay-0-2s'
-      "
+      <div *ngFor="let emprendimiento of filtrados; let i = index"
+           appInViewport
            class="rounded-md flex justify-center"
       >
         <div class="max-w-sm bg-[#F8DB83] border border-gray-200 rounded-lg">
