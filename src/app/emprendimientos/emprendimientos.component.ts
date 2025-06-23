@@ -43,7 +43,7 @@ export class EmprendimientosComponent implements OnInit {
     this.http.get<any>('assets/emprendimientos.json').subscribe((data) => {
       if (data?.emprendimientos) {
         this.emprendimientos = data.emprendimientos.filter((e: Emprendimiento) => !!e.nombre);
-        console.log(this.emprendimientos[0].imagenes[0].url_image);
+        this.filtrados = this.emprendimientos;
       } else {
         console.error('contactos_adicionales no encontrados en el JSON');
       }
