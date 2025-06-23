@@ -2,7 +2,7 @@
   <div class="container mx-auto px-6 py-3 flex items-center justify-between">
 
     <a (click)="redirigir('/')" class="cursor-pointer">
-      <img src="https://i.ibb.co/4k3W8Tz/Logonegro.png" alt="Logo Intermontañas" class="h-10">
+      <img *ngIf="contenido.length > 0" [src]="contenido[0].url_image" [alt]="contenido[0].alt" class="h-10">
     </a>
 
     <nav class="hidden md:block">
@@ -76,20 +76,22 @@
       <div class="absolute inset-0 bg-[#628D2A] opacity-80 z-0"></div>
 
       <div class="relative z-10 flex justify-between items-center">
-        <img src="https://i.ibb.co/4k3W8Tz/Logonegro.png" alt="Logo" class="h-10">
+        <img *ngIf="contenidoMovil.length > 0" [src]="contenidoMovil[0].url_image" [alt]="contenidoMovil[0].alt" class="h-10">
         <button class="text-4xl font-bold" (click)="cerrarMenu()">&times;</button>
       </div>
 
       <ul
         class="relative z-10 flex flex-col items-center justify-center flex-grow gap-6 text-2xl font-bold font-inriaLight">
-        <li><a (click)="redirigir('/'); cerrarMenu()">Inicio</a></li>
-        <li><a (click)="redirigir('/emprendimientos'); cerrarMenu()">Emprendimientos</a></li>
-        <li><a (click)="redirigir('/comousar'); cerrarMenu()">Cómo usar</a></li>
-        <li><a (click)="redirigir('/contactos'); cerrarMenu()">Contacto</a></li>
-        <li><a (click)="redirigir('/acerca'); cerrarMenu()">Acerca</a></li>
+        <li><a (click)="redirigir('/'); cerrarMenu()" class="font-bold font-lemon">Inicio</a></li>
+        <li><a (click)="redirigir('/acerca'); cerrarMenu()"class="font-bold font-lemon">Acerca</a></li>
+        <li><a (click)="redirigir('/comousar'); cerrarMenu()"class="font-bold font-lemon">Cómo usar</a></li>
+        <li><a (click)="redirigir('/emprendimientos'); cerrarMenu()"class="font-bold font-lemon">Emprendimientos</a></li>
+        <li><a (click)="redirigir('/contactos'); cerrarMenu()"class="font-bold font-lemon">Contacto</a></li>
+        
       </ul>
 
     </nav>
 
   </div>
 </header>
+

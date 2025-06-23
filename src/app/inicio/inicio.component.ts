@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuComponent } from '../menu/menu.component';
+import { FooterComponent } from '../footer/footer.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
@@ -28,7 +29,6 @@ export class InicioComponent implements OnInit{
       const inicio = data.contenidos.find((c: Contenido) => c.nombre === 'inicio');
       if (inicio) {
         this.contenido = [inicio];
-        console.log('Contenido cargado:', this.contenido);
       } else {
         console.error('No se encontró el contenido "inicio" en el JSON.');
       }
