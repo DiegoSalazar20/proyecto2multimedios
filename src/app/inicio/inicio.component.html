@@ -1,22 +1,23 @@
 <app-menu></app-menu>
-<section class="bg-[#B4C8B1] min-h-screen flex flex-col justify-center text-center px-4 py-10 md:px-10 pt-[70px]">
+<main class="bg-[#B4C8B1] min-h-[calc(100vh-90px)] px-4 py-6 md:px-10 pt-[70px] text-[#252525] flex flex-col items-center gap-4">
 
-  <h1 class="text-3xl md:text-4xl font-bold mb-4 font-lemon animate__animated animate__fadeInLeft">
+  <h1 class="text-2xl md:text-3xl font-bold font-lemon animate__animated animate__fadeInLeft">
     Turrialba y Jimenez
   </h1>
 
-  <p class="max-w-3xl mx-auto text-[17px] font-inriaLight leading-relaxed mb-6 animate__animated animate__fadeInRight">
+  <p class="max-w-3xl mx-auto text-base font-inriaLight leading-normal text-center animate__animated animate__fadeInRight">
     El Comité Local del Movimiento Un Pueblo un Producto impulsa desde el 2017 la metodología D-Hope, lo cual promueve
-    los emprendimientos locales que ofrecen programas vivenciales con el objetivo de divulgarlos y promocionarlos
+    los emprendimientos locales que ofrecen programas vivenciales con el objetivo de divulgarlos y promocionarlos.
   </p>
 
   <img *ngIf="contenido.length > 0" [src]="contenido[0].url_image" [alt]="contenido[0].alt"
-    class="mx-auto rounded-lg w-full max-w-[500px] md:max-w-[480px] object-contain animate__animated animate__fadeInUp" />
+    class="mx-auto rounded-lg w-full max-w-[460px] object-contain animate__animated animate__fadeInUp" />
 
-  <div class="mt-6 animate__animated animate__fadeInUp animate__delay-1s">
+  <div class="mt-4 animate__animated animate__fadeInUp animate__delay-1s">
     <button (click)="RedirigirEmprendimientos()"
-      class="bg-[#F2C94C] text-black font-medium px-5 py-2 rounded-full hover:bg-[#D2AD3D] active:bg-[#F8DB83] transition">
+      class="bg-[#F2C94C] text-black font-medium px-4 py-1.5 rounded-full hover:bg-[#D2AD3D] active:bg-[#F8DB83] transition">
       Ver emprendimientos
     </button>
   </div>
-</section>
+
+</main>

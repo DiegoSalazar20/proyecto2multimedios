@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuComponent } from '../menu/menu.component';
+import { FooterComponent } from '../footer/footer.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';

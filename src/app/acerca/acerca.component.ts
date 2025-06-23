@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { MenuComponent } from '../menu/menu.component';
 
 interface Contenido {
   nombre: string;
@@ -11,7 +10,7 @@ interface Contenido {
 
 @Component({
   selector: 'app-acerca',
-  imports: [MenuComponent, HttpClientModule, CommonModule],
+  imports: [HttpClientModule, CommonModule],
   templateUrl: './acerca.component.html',
   styleUrl: './acerca.component.css'
 })

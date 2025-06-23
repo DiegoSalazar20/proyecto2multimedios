@@ -28,7 +28,6 @@ animacionEntrada = false;
   abrirMenu() {
   this.menuAbierto = true;
   this.cerrandoMenu = false;
-  // Activar animación de entrada en el siguiente ciclo del DOM
   setTimeout(() => {
     this.animacionEntrada = true;
   }, 10);
@@ -45,4 +44,14 @@ onAnimacionTerminada() {
     this.cerrandoMenu = false;
   }
 }
+
+modalAbierto: boolean = false;
+
+  abrirModalPoliticas() {
+    this.modalAbierto = true;
+  }
+
+  cerrarModalPoliticas() {
+    this.modalAbierto = false;
+  }
 }

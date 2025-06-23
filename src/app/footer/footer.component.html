@@ -1,0 +1,39 @@
+<footer class="bg-[#F5F5DC] text-[#252525] py-6 shadow-inner text-center text-sm">
+  <p class="mb-2">Copyright©Entre montañas 2025</p>
+  <button (click)="abrirModalPoliticas()"
+    class="underline text-blue-700 hover:text-blue-900 transition">
+    Políticas de uso y privacidad
+  </button>
+
+
+<div *ngIf="modalAbierto" class="fixed inset-0 bg-[rgba(0,0,0,0.5)] z-50 flex justify-center items-center">
+  <div class="bg-white rounded-2xl shadow-lg max-w-md w-[90%] p-6 relative animate__animated animate__fadeInDown">
+
+    
+    <button (click)="cerrarModalPoliticas()" class="absolute top-3 right-3 text-xl font-bold text-gray-700 hover:text-black">
+      &times;
+    </button>
+
+    
+    <h2 class="text-xl font-semibold mb-4 text-[#252525]">Políticas de Uso y Privacidad</h2>
+
+   
+    <p class="text-sm text-gray-700 leading-relaxed">
+      Este sitio web tiene un propósito exclusivamente informativo. Su objetivo es brindar visibilidad a emprendimientos locales y facilitar que las personas interesadas conozcan sus programas, productos o servicios.
+    </p>
+
+    <ul class="text-sm text-gray-700 list-disc pl-6 my-4 space-y-2 text-left">
+      <li><strong>No se recopila información personal:</strong> La plataforma no solicita, almacena ni procesa datos de los visitantes. No existen formularios de registro ni envío de mensajes desde el sitio.</li>
+      <li><strong>Uso del contenido:</strong> Toda la información mostrada —incluyendo imágenes, descripciones y datos de contacto— pertenece a los emprendimientos y es compartida con fines de promoción local. Se prohíbe su reproducción con fines comerciales sin autorización.</li>
+      <li><strong>Responsabilidad del usuario:</strong> Cualquier contacto o acuerdo con los emprendimientos debe realizarse directamente entre las partes. El sitio no interviene en la comunicación, reservas ni transacciones.</li>
+    </ul>
+
+    <p class="text-sm text-gray-700 leading-relaxed">
+      Al continuar navegando en este sitio, se entiende que el usuario acepta estas condiciones de uso y privacidad.
+    </p>
+
+  </div>
+</div>
+
+
+</footer>
