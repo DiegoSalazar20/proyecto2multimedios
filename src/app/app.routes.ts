@@ -4,6 +4,7 @@ import { AcercaComponent } from './acerca/acerca.component';
 import { EmprendimientosComponent } from './emprendimientos/emprendimientos.component';
 import { ComousarComponent } from './comousar/comousar.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import {EmprendimientoDetalleComponent} from './emprendimiento-detalle/emprendimiento-detalle.component';
 
 
 export const routes: Routes = [
@@ -12,5 +13,6 @@ export const routes: Routes = [
     {path: 'comousar', component: ComousarComponent},
     {path: 'acerca', component: AcercaComponent},
     {path: 'emprendimientos', component: EmprendimientosComponent},
-    {path: 'contactos', component: ContactoComponent}
+    {path: 'contactos', component: ContactoComponent},
+    {path: 'emprendimiento/:id', component: EmprendimientoDetalleComponent}
 ];

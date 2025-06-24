@@ -6,6 +6,7 @@
   ],
   "emprendimientos": [
     {
+      "id": 1,
       "nombre": "Finca Vialig",
       "categoria": "Agroturismo",
       "descripcion": "Giras educativas y formativas en un contexto rural.",
@@ -37,6 +38,7 @@
       ]
     },
     {
+      "id": 2,
       "nombre": "Finca Dulce Doña Tanita",
       "categoria": "Agroturismo",
       "descripcion": "Actividad productiva orgánica en la forma tradicional.",
@@ -68,6 +70,7 @@
       ]
     },
     {
+      "id": 3,
       "nombre": "Finca Los Helechos",
       "categoria": "Agroturismo",
       "descripcion": "Finca Integral con experiencia educativa.",
@@ -99,6 +102,7 @@
       ]
     },
     {
+      "id": 4,
       "nombre": "Chiles Mery",
       "categoria": "Productos artesanales",
       "descripcion": "Experiencia en siembra, cosecha de chile jalapeño y elaboración de chileras.",
@@ -130,6 +134,7 @@
       ]
     },
     {
+      "id": 5,
       "nombre": "La Cosecha del Abuelo",
       "categoria": "Productos artesanales",
       "descripcion": "Elaboración de jaleas y licores.",
@@ -161,6 +166,7 @@
       ]
     },
     {
+      "id": 6,
       "nombre": "Productos La Niña Yin",
       "categoria": "Productos artesanales",
       "descripcion": "Productos a base de sal, azúcar, dulce y vinagre con hierbas y especies naturales.",
@@ -192,6 +198,7 @@
       ]
     },
     {
+      "id": 7,
       "nombre": "Agro-Ecoturismo Yhamorë",
       "categoria": "Turismo vivencial",
       "descripcion": "es un proyecto familiar en la Comunidad Colonia de Guayabo, el cual pretende con prácticas sostenibles con el ambiente, dar a conocer nuestra comunidad.",
@@ -223,6 +230,7 @@
       ]
     },
     {
+      "id": 8,
       "nombre": "Tour del Café Naturalba",
       "categoria": "Turismo vivencial",
       "descripcion": "Proceso completo de producción de café: recolección, tueste y degustación.",
@@ -254,6 +262,7 @@
       ]
     },
     {
+      "id": 9,
       "nombre": "Morpho",
       "categoria": "Turismo vivencial",
       "descripcion": "Cría e interacción con mariposas en el mariposario.",

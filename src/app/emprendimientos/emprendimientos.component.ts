@@ -4,8 +4,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import {CommonModule} from '@angular/common';
 import {InViewportDirective} from '../../utils/in-viewport.directive';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 export interface Emprendimiento {
+  id: number;
   nombre: string;
   categoria: string;
   descripcion: string;
@@ -37,7 +39,7 @@ export class EmprendimientosComponent implements OnInit {
   emprendimientos: Emprendimiento[] = [];
   filtrados: Emprendimiento[] = [];
   busqueda: string = '';
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit(): void {
     this.http.get<any>('assets/emprendimientos.json').subscribe((data) => {
@@ -55,6 +57,10 @@ export class EmprendimientosComponent implements OnInit {
     this.filtrados = this.emprendimientos.filter((e) =>
       e.nombre.toLowerCase().includes(termino)
     );
+  }
+
+  redirigirEmprendimiento(id: number): void {
+    this.router.navigate(['/emprendimiento', id]);
   }
 
 }

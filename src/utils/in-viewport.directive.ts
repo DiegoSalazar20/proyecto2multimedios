@@ -22,15 +22,14 @@ export class InViewportDirective implements OnInit, OnDestroy {
         this.observer = new IntersectionObserver(([entry]) => {
           if (entry.isIntersecting) {
             this.renderer.addClass(this.el.nativeElement, 'animate__fadeInLeft');
-            this.renderer.removeClass(this.el.nativeElement, 'opacity-0');
+            this.renderer.removeClass(this.el.nativeElement, '');
             this.observer.disconnect();
           }
         }, { threshold: 0.1 });
 
         this.observer.observe(this.el.nativeElement);
       } else {
-        // Fallback si el navegador no soporta IntersectionObserver
-        this.renderer.removeClass(this.el.nativeElement, 'opacity-0');
+        this.renderer.removeClass(this.el.nativeElement, '');
       }
     }
   }
