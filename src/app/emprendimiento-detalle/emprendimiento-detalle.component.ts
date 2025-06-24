@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import {ActivatedRoute} from '@angular/router';
+import {NgForOf, NgIf} from '@angular/common';
 
 export interface Emprendimiento {
   id: number;
@@ -26,22 +27,27 @@ export interface Imagen {
 }
 @Component({
   selector: 'app-emprendimiento-detalle',
-  imports: [HttpClientModule],
+  imports: [HttpClientModule, NgIf, NgForOf],
   templateUrl: './emprendimiento-detalle.component.html',
   styleUrl: './emprendimiento-detalle.component.css'
 })
 export class EmprendimientoDetalleComponent implements OnInit {
-  emprendimientos: Emprendimiento[] = [];
+  emprendimiento!: Emprendimiento;
   constructor(private http: HttpClient, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id');
-    console.log('ID recibido:', id);
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+
     this.http.get<any>('assets/emprendimientos.json').subscribe((data) => {
       if (data?.emprendimientos) {
-        this.emprendimientos = data.emprendimientos.filter((e: Emprendimiento) => !!e.nombre);
+        const encontrado = data.emprendimientos.find((e: any) => e.id === id);
+        if (encontrado) {
+          this.emprendimiento = encontrado;
+        } else {
+          console.error('Emprendimiento no encontrado con id:', id);
+        }
       } else {
-        console.error('contactos_adicionales no encontrados en el JSON');
+        console.error('No se encontraron emprendimientos en el JSON');
       }
     });
   }
