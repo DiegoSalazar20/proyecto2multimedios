@@ -41,7 +41,7 @@
            appInViewport
            class="rounded-md flex justify-center"
       >
-        <div class="w-10/12 bg-[#F8DB83] border border-gray-200 rounded-lg overflow-hidden">
+        <div class="w-10/12 bg-[#F8DB83] border border-gray-200 rounded-lg overflow-hidden" (click)="redirigirEmprendimiento(emprendimiento.id)">
           <div class="w-full h-90 relative">
             <img
               class="w-full h-full object-cover"
@@ -50,7 +50,7 @@
             />
           </div>
           <div class="p-5">
-            <a role="button" (click)="redirigirEmprendimiento(emprendimiento.id)" class="w-full">
+            <a role="button" class="w-full">
               <h5 class="mb-2 text-2xl font-[Kalam] font-light text-gray-900 text-center underline">
                 {{ emprendimiento.nombre }}
               </h5>

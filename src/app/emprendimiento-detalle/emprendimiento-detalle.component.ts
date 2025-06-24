@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import {ActivatedRoute} from '@angular/router';
 import {NgForOf, NgIf} from '@angular/common';
+import { Router } from '@angular/router';
 
 export interface Emprendimiento {
   id: number;
@@ -33,7 +34,7 @@ export interface Imagen {
 })
 export class EmprendimientoDetalleComponent implements OnInit {
   emprendimiento!: Emprendimiento;
-  constructor(private http: HttpClient, private route: ActivatedRoute) {}
+  constructor(private http: HttpClient, private route: ActivatedRoute, public router: Router) {}
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
