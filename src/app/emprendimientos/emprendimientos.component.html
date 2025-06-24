@@ -41,13 +41,19 @@
            appInViewport
            class="rounded-md flex justify-center"
       >
-        <div class="max-w-sm bg-[#F8DB83] border border-gray-200 rounded-lg">
-          <a href="#">
-            <img class="rounded-t-lg w-full h-60 object-cover" src="{{emprendimiento.imagenes[0].url_image}}" alt="" />
-          </a>
+        <div class="w-10/12 bg-[#F8DB83] border border-gray-200 rounded-lg overflow-hidden" (click)="redirigirEmprendimiento(emprendimiento.id)">
+          <div class="w-full h-90 relative">
+            <img
+              class="w-full h-full object-cover"
+              [src]="emprendimiento.imagenes[0].url_image"
+              [alt]="emprendimiento.imagenes[0].alt"
+            />
+          </div>
           <div class="p-5">
-            <a href="#">
-              <h5 class="mb-2 text-2xl font-[Kalam] font-light text-gray-900 text-center underline">{{ emprendimiento.nombre }}</h5>
+            <a role="button" class="w-full">
+              <h5 class="mb-2 text-2xl font-[Kalam] font-light text-gray-900 text-center underline">
+                {{ emprendimiento.nombre }}
+              </h5>
             </a>
           </div>
         </div>
