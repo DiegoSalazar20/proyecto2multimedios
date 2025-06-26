@@ -14,7 +14,7 @@ export class InViewportDirective implements OnInit, OnDestroy {
     private el: ElementRef,
     private renderer: Renderer2,
     @Inject(PLATFORM_ID) private platformId: Object
-  ) {}
+  ) { }
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
@@ -22,17 +22,15 @@ export class InViewportDirective implements OnInit, OnDestroy {
         this.observer = new IntersectionObserver(([entry]) => {
           if (entry.isIntersecting) {
             this.renderer.addClass(this.el.nativeElement, 'animate__fadeInLeft');
-            this.renderer.removeClass(this.el.nativeElement, '');
             this.observer.disconnect();
           }
         }, { threshold: 0.1 });
 
         this.observer.observe(this.el.nativeElement);
-      } else {
-        this.renderer.removeClass(this.el.nativeElement, '');
       }
     }
   }
+
 
   ngOnDestroy() {
     if (this.observer) {

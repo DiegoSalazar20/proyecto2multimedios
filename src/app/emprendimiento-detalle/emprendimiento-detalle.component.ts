@@ -34,6 +34,8 @@ export interface Imagen {
 })
 export class EmprendimientoDetalleComponent implements OnInit {
   emprendimiento!: Emprendimiento;
+  indiceActual: number = 0;
+
   constructor(private http: HttpClient, private route: ActivatedRoute, public router: Router) {}
 
   ngOnInit(): void {
@@ -52,4 +54,22 @@ export class EmprendimientoDetalleComponent implements OnInit {
       }
     });
   }
+
+get imagenActual() {
+  return this.emprendimiento?.imagenes?.[this.indiceActual];
+}
+
+siguienteImagen() {
+  if (this.emprendimiento?.imagenes?.length) {
+    this.indiceActual = (this.indiceActual + 1) % this.emprendimiento.imagenes.length;
+  }
+}
+
+anteriorImagen() {
+  if (this.emprendimiento?.imagenes?.length) {
+    this.indiceActual = (this.indiceActual - 1 + this.emprendimiento.imagenes.length) % this.emprendimiento.imagenes.length;
+  }
+}
+
+
 }
