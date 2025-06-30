@@ -2,7 +2,7 @@
   <div class="container mx-auto px-6 py-3 flex items-center justify-between">
 
     <a (click)="redirigir('/')" class="cursor-pointer">
-      <img *ngIf="contenido.length > 0" [src]="contenido[0].url_image" [alt]="contenido[0].alt" class="h-10">
+      <img *ngIf="contenido.length > 0" [src]="contenido[0].url_image" [alt]="contenido[0].alt" class="h-10 transform transition-transform duration-300 hover:scale-105 cursor-pointer">
     </a>
 
     <nav class="hidden md:block">
@@ -75,7 +75,7 @@
 
       <div class="absolute inset-0 bg-[#628D2A] opacity-80 z-0"></div>
 
-      <div class="relative z-10 flex justify-between items-center">
+      <div class="relative z-10 flex justify-between items-center" (click)="redirigir('/')">
         <img *ngIf="contenidoMovil.length > 0" [src]="contenidoMovil[0].url_image" [alt]="contenidoMovil[0].alt" class="h-10">
         <button class="text-4xl font-bold" (click)="cerrarMenu()">&times;</button>
       </div>
