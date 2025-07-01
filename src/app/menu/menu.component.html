@@ -2,7 +2,8 @@
   <div class="container mx-auto px-6 py-3 flex items-center justify-between">
 
     <a (click)="redirigir('/')" class="cursor-pointer">
-      <img *ngIf="contenido.length > 0" [src]="contenido[0].url_image" [alt]="contenido[0].alt" class="h-10 transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+      <img *ngIf="contenido.length > 0" [src]="contenido[0].url_image" [alt]="contenido[0].alt"
+        class="h-10 transform transition-transform duration-300 hover:scale-105 cursor-pointer">
     </a>
 
     <nav class="hidden md:block">
@@ -36,13 +37,13 @@
         </li>
 
         <li>
-  <a (click)="redirigir('/emprendimientos')" [ngClass]="{
+          <a (click)="redirigir('/emprendimientos')" [ngClass]="{
     'bg-[#8CC63F] px-3 py-1 rounded-full': rutaActual.includes('/emprendimientos') || rutaActual.startsWith('/emprendimiento/'),
     'hover:underline': !rutaActual.includes('/emprendimientos') && !rutaActual.startsWith('/emprendimiento/')
   }" class="transition cursor-pointer">
-    Emprendimientos
-  </a>
-</li>
+            Emprendimientos
+          </a>
+        </li>
 
         <li>
           <a (click)="redirigir('/contactos')" [ngClass]="{
@@ -56,42 +57,75 @@
       </ul>
     </nav>
 
-    <button
-  class="md:hidden flex flex-col justify-between w-8 h-6"
-  (click)="abrirMenu()"
-  aria-label="Abrir menú"
->
-  <span class="w-full h-1 bg-[#F2C94C] border border-black transition hover:bg-[#D2AD3D] active:bg-[#F8DB83]"></span>
-  <span class="w-full h-1 bg-[#F2C94C] border border-black transition hover:bg-[#D2AD3D] active:bg-[#F8DB83]"></span>
-  <span class="w-full h-1 bg-[#F2C94C] border border-black transition hover:bg-[#D2AD3D] active:bg-[#F8DB83]"></span>
-</button>
+    <button class="md:hidden flex flex-col justify-between w-8 h-6" (click)="abrirMenu()" aria-label="Abrir menú">
+      <span
+        class="w-full h-1 bg-[#F2C94C] border border-black transition hover:bg-[#D2AD3D] active:bg-[#F8DB83]"></span>
+      <span
+        class="w-full h-1 bg-[#F2C94C] border border-black transition hover:bg-[#D2AD3D] active:bg-[#F8DB83]"></span>
+      <span
+        class="w-full h-1 bg-[#F2C94C] border border-black transition hover:bg-[#D2AD3D] active:bg-[#F8DB83]"></span>
+    </button>
 
     <nav *ngIf="menuAbierto" (animationend)="onAnimacionTerminada()"
       class="fixed inset-0 z-50 text-white flex flex-col justify-between p-6 animate__animated" [ngClass]="{
        'animate__slideInRight': animacionEntrada && !cerrandoMenu,
        'animate__slideOutRight': cerrandoMenu
-     }"
-      [ngStyle]="{ 'background-image': 'url(https://i.ibb.co/nN29cTKD/fondo.jpg)', 'background-size': 'cover', 'background-position': 'center' }">
+     }" [ngStyle]="{
+  'background-image': fondoMenuMovil ? 'url(' + fondoMenuMovil.url_image + ')' : 'none',
+  'background-size': 'cover',
+  'background-position': 'center'
+}">
 
       <div class="absolute inset-0 bg-[#628D2A] opacity-80 z-0"></div>
 
       <div class="relative z-10 flex justify-between items-center" (click)="redirigir('/')">
-        <img *ngIf="contenidoMovil.length > 0" [src]="contenidoMovil[0].url_image" [alt]="contenidoMovil[0].alt" class="h-10">
+        <img *ngIf="contenidoMovil.length > 0" [src]="contenidoMovil[0].url_image" [alt]="contenidoMovil[0].alt"
+          class="h-10">
         <button class="text-4xl font-bold" (click)="cerrarMenu()">&times;</button>
       </div>
 
       <ul
         class="relative z-10 flex flex-col items-center justify-center flex-grow gap-6 text-2xl font-bold font-inriaLight">
-        <li><a (click)="redirigir('/'); cerrarMenu()" class="font-bold font-lemon">Inicio</a></li>
-        <li><a (click)="redirigir('/acerca'); cerrarMenu()"class="font-bold font-lemon">Acerca</a></li>
-        <li><a (click)="redirigir('/comousar'); cerrarMenu()"class="font-bold font-lemon">Cómo usar</a></li>
-        <li><a (click)="redirigir('/emprendimientos'); cerrarMenu()"class="font-bold font-lemon">Emprendimientos</a></li>
-        <li><a (click)="redirigir('/contactos'); cerrarMenu()"class="font-bold font-lemon">Contacto</a></li>
-        
+        <li>
+          <a (click)="redirigir('/'); cerrarMenu()" [ngClass]="{
+         'bg-[#8CC63F] px-4 py-2 rounded-full': rutaActual === '/'
+       }" class="font-bold font-lemon transition">
+            Inicio
+          </a>
+        </li>
+        <li>
+          <a (click)="redirigir('/acerca'); cerrarMenu()" [ngClass]="{
+         'bg-[#8CC63F] px-4 py-2 rounded-full': rutaActual.includes('/acerca')
+       }" class="font-bold font-lemon transition">
+            Acerca
+          </a>
+        </li>
+        <li>
+          <a (click)="redirigir('/comousar'); cerrarMenu()" [ngClass]="{
+         'bg-[#8CC63F] px-4 py-2 rounded-full': rutaActual.includes('/comousar')
+       }" class="font-bold font-lemon transition">
+            Cómo usar
+          </a>
+        </li>
+        <li>
+          <a (click)="redirigir('/emprendimientos'); cerrarMenu()" [ngClass]="{
+         'bg-[#8CC63F] px-4 py-2 rounded-full': rutaActual.includes('/emprendimientos') || rutaActual.startsWith('/emprendimiento/')
+       }" class="font-bold font-lemon transition">
+            Emprendimientos
+          </a>
+        </li>
+        <li>
+          <a (click)="redirigir('/contactos'); cerrarMenu()" [ngClass]="{
+         'bg-[#8CC63F] px-4 py-2 rounded-full': rutaActual.includes('/contactos')
+       }" class="font-bold font-lemon transition">
+            Contacto
+          </a>
+        </li>
       </ul>
+
+
 
     </nav>
 
   </div>
 </header>
-

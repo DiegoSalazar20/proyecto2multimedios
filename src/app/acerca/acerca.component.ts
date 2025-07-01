@@ -26,7 +26,6 @@ export class AcercaComponent implements OnInit {
         const acerca = data.contenidos.find((c: Contenido) => c.nombre === 'acerca');
         if (acerca) {
           this.contenido = [acerca];
-          console.log('Contenido cargado:', this.contenido);
         } else {
           console.error('No se encontró el contenido "inicio" en el JSON.');
         }

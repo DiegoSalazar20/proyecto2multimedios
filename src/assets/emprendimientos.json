@@ -370,6 +370,11 @@
       "nombre": "logo_negro",
       "url_image": "https://i.ibb.co/hFvw6qP1/LOGO-MULTIMEDIO.png",
       "alt": "Logo de entre montañas en color negro sobre fondo transparente"
-    }
+    },
+    {
+    "nombre": "fondo_menu_movil",
+    "url_image": "https://i.ibb.co/nN29cTKD/fondo.jpg",
+    "alt": "Imagen de fondo difuminada con colores verdes para el menú móvil"
+  }
   ]
 }

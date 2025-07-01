@@ -9,6 +9,7 @@ interface Contenido {
   alt: string;
 }
 
+
 @Component({
   selector: 'app-menu',
   imports: [CommonModule, HttpClientModule],
@@ -24,6 +25,8 @@ export class MenuComponent {
   contenido: Contenido[] = [];
   contenidoMovil: Contenido[] = [];
 
+  fondoMenuMovil: { url_image: string; alt: string } | null = null;
+
   constructor(private router: Router, private http: HttpClient) {
     this.router.events.subscribe(() => {
       this.rutaActual = this.router.url;
@@ -33,6 +36,7 @@ export class MenuComponent {
   ngOnInit(): void {
     this.cargarLogoDesktop();
     this.cargarLogoMovil();
+    this.cargarFondoMenuMovil();
   }
   
 
@@ -65,6 +69,22 @@ export class MenuComponent {
       }
     });
   }
+
+  cargarFondoMenuMovil() {
+  this.http.get<any>('assets/emprendimientos.json').subscribe((data) => {
+    if (data?.contenidos) {
+      const fondo = data.contenidos.find((c: Contenido) => c.nombre === 'fondo_menu_movil');
+      if (fondo) {
+        this.fondoMenuMovil = fondo;
+      } else {
+        console.error('No se encontró el contenido "fondo_menu_movil" en el JSON.');
+      }
+    } else {
+      console.error('contenidos no encontrados en el JSON.');
+    }
+  });
+}
+
   redirigir(ruta: string) {
     this.router.navigate([ruta]);
   }
