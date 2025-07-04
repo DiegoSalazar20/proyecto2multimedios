@@ -60,7 +60,9 @@ export class EmprendimientosComponent implements OnInit {
   }
 
   redirigirEmprendimiento(id: number): void {
+    setTimeout(() => {
     this.router.navigate(['/emprendimiento', id]);
+  }, 200);
   }
 
 }
