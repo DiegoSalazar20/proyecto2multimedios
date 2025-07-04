@@ -1,3 +1,16 @@
+@media (max-width: 999px) {
+  .solo-desktop {
+    display: none !important;
+  }
+
+  .solo-movil {
+    display: block !important;
+  }
+
+  .modo-movil-flex {
+    flex-direction: column-reverse !important;
+  }
+}
 
 @media (min-width: 1000px) {
   .solo-desktop {
@@ -7,14 +20,8 @@
   .solo-movil {
     display: none !important;
   }
-}
 
-@media (max-width: 999px) {
-  .solo-desktop {
-    display: none !important;
-  }
-
-  .solo-movil {
-    display: block !important;
+  .modo-movil-flex {
+    flex-direction: row !important;
   }
 }
