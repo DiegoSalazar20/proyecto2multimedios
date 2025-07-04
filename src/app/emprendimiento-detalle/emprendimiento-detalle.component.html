@@ -10,8 +10,8 @@
   <section class="flex modo-movil-flex">
     <!-- Galería escritorio -->
     <section class="solo-desktop grid-cols-2 gap-8 w-full p-4 overflow-hidden animate__animated animate__fadeInUp">
-      <div *ngFor="let imagenes of emprendimiento.imagenes; let i = index" class="w-full h-64 relative">
-        <img class="w-full h-full object-cover" [src]="imagenes.url_image" [alt]="emprendimiento.imagenes[0].alt" />
+      <div *ngFor="let imagenes of emprendimiento.imagenes; let i = index" class="w-full h-50 relative">
+        <img class="w-full h-full object-cover" [src]="imagenes.url_image" [alt]="imagenes.alt" />
       </div>
     </section>
 
