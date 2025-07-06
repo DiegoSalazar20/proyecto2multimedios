@@ -1,8 +1,8 @@
-import {Component, OnInit} from '@angular/core';
-import {MenuComponent} from '../menu/menu.component';
+import { Component, OnInit } from '@angular/core';
+import { MenuComponent } from '../menu/menu.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import {CommonModule} from '@angular/common';
-import {InViewportDirective} from '../../utils/in-viewport.directive';
+import { CommonModule } from '@angular/common';
+import { InViewportDirective } from '../../utils/in-viewport.directive';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -42,8 +42,8 @@ export class EmprendimientosComponent implements OnInit {
   filtrados: Emprendimiento[] = [];
   busqueda: string = '';
   emprendimientoSeleccionado: number | null = null;
-esMovil: boolean = false;
-  constructor(private http: HttpClient, private router: Router) {}
+  esMovil: boolean = false;
+  constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
     this.http.get<any>('assets/emprendimientos.json').subscribe((data) => {
@@ -68,15 +68,15 @@ esMovil: boolean = false;
     this.router.navigate(['/emprendimiento', id]);
   }
 
+
+  activarHoverMovil(index: number) {
+    this.emprendimientoSeleccionado = index;
+  }
+
+  desactivarHoverMovil() {
+    setTimeout(() => {
+      this.emprendimientoSeleccionado = null;
+    }, 300);
+  }
   
-activarHoverMovil(index: number) {
-  this.emprendimientoSeleccionado = index;
-}
-
-desactivarHoverMovil() {
-  setTimeout(() => {
-    this.emprendimientoSeleccionado = null;
-  }, 300); // Tiempo para que se note el efecto
-}
-
 }
