@@ -78,9 +78,10 @@
 
       <div class="absolute inset-0 bg-[#628D2A] opacity-80 z-0"></div>
 
-      <div class="relative z-10 flex justify-between items-center" (click)="redirigir('/')">
+      <div class="relative z-10 flex justify-between items-center">
         <img *ngIf="contenidoMovil.length > 0" [src]="contenidoMovil[0].url_image" [alt]="contenidoMovil[0].alt"
-          class="h-10">
+          class="h-10 cursor-pointer" (click)="redirigir('/')">
+
         <button class="text-4xl font-bold" (click)="cerrarMenu()">&times;</button>
       </div>
 
