@@ -29,6 +29,8 @@ export interface Imagen {
   alt: string;
 }
 
+
+
 @Component({
   selector: 'app-emprendimientos',
   imports: [CommonModule, HttpClientModule, MenuComponent, InViewportDirective, FormsModule],
@@ -39,6 +41,8 @@ export class EmprendimientosComponent implements OnInit {
   emprendimientos: Emprendimiento[] = [];
   filtrados: Emprendimiento[] = [];
   busqueda: string = '';
+  emprendimientoSeleccionado: number | null = null;
+esMovil: boolean = false;
   constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit(): void {
@@ -50,6 +54,7 @@ export class EmprendimientosComponent implements OnInit {
         console.error('contactos_adicionales no encontrados en el JSON');
       }
     });
+    this.esMovil = window.innerWidth < 768;
   }
 
   filtrar(): void {
@@ -60,9 +65,18 @@ export class EmprendimientosComponent implements OnInit {
   }
 
   redirigirEmprendimiento(id: number): void {
-    setTimeout(() => {
     this.router.navigate(['/emprendimiento', id]);
-  }, 200);
   }
+
+  
+activarHoverMovil(index: number) {
+  this.emprendimientoSeleccionado = index;
+}
+
+desactivarHoverMovil() {
+  setTimeout(() => {
+    this.emprendimientoSeleccionado = null;
+  }, 300); // Tiempo para que se note el efecto
+}
 
 }
