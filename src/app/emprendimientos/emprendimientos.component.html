@@ -26,8 +26,13 @@
   <section class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl">
     <div *ngFor="let emprendimiento of filtrados; let i = index" appInViewport class="rounded-md flex justify-center">
       <div
-  class="w-10/12 bg-[#F8DB83] border border-gray-200 rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 active:scale-105 cursor-pointer"
-  (click)="redirigirEmprendimiento(emprendimiento.id)">
+        class="w-10/12 bg-[#F8DB83] border border-gray-200 rounded-lg overflow-hidden transform transition-transform duration-300  cursor-pointer"
+        [ngClass]="{
+    'hover:scale-105': !esMovil,
+    'scale-105': emprendimientoSeleccionado === i
+  }" (click)="redirigirEmprendimiento(emprendimiento.id)" (touchstart)="activarHoverMovil(i)"
+        (touchend)="desactivarHoverMovil()">
+
         <div class="w-full h-90 relative">
           <img class="w-full h-full object-cover" [src]="emprendimiento.imagenes[0].url_image"
             [alt]="emprendimiento.imagenes[0].alt" />
