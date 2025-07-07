@@ -67,66 +67,78 @@
     </button>
 
     <nav *ngIf="menuAbierto" (animationend)="onAnimacionTerminada()"
-      class="fixed inset-0 z-50 text-white flex flex-col justify-between p-6 animate__animated" [ngClass]="{
-       'animate__slideInRight': animacionEntrada && !cerrandoMenu,
-       'animate__slideOutRight': cerrandoMenu
-     }" [ngStyle]="{
-  'background-image': fondoMenuMovil ? 'url(' + fondoMenuMovil.url_image + ')' : 'none',
-  'background-size': 'cover',
-  'background-position': 'center'
-}">
+  class="fixed inset-0 z-50 text-white flex flex-col justify-between p-6 animate__animated"
+  [ngClass]="{
+    'animate__slideInRight': animacionEntrada && !cerrandoMenu,
+    'animate__slideOutRight': cerrandoMenu
+  }"
+  [ngStyle]="{
+    'background-image': fondoMenuMovil ? 'url(' + fondoMenuMovil.url_image + ')' : 'none',
+    'background-size': 'cover',
+    'background-position': 'center'
+  }">
 
-      <div class="absolute inset-0 bg-[#628D2A] opacity-80 z-0"></div>
+  <div class="absolute inset-0 bg-[#628D2A] opacity-80 z-0"></div>
 
-      <div class="relative z-10 flex justify-between items-center">
-        <img *ngIf="contenidoMovil.length > 0" [src]="contenidoMovil[0].url_image" [alt]="contenidoMovil[0].alt"
-          class="h-10 cursor-pointer" (click)="redirigir('/')">
+  <div class="relative z-10 flex justify-between items-center">
+    <img *ngIf="contenidoMovil.length > 0" [src]="contenidoMovil[0].url_image" [alt]="contenidoMovil[0].alt"
+      class="h-10 cursor-pointer" (click)="redirigir('/')">
+    <button class="text-4xl font-bold" (click)="cerrarMenu()">&times;</button>
+  </div>
 
-        <button class="text-4xl font-bold" (click)="cerrarMenu()">&times;</button>
-      </div>
+  <ul class="relative z-10 flex flex-col items-center justify-center flex-grow gap-6 text-2xl font-bold font-inriaLight">
+    <li>
+      <a (click)="redirigir('/'); cerrarMenu()" (touchstart)="activarHoverMovilMenu(0)" (touchend)="desactivarHoverMovilMenu()"
+        [ngClass]="{
+          'bg-[#8CC63F] px-4 py-2 rounded-full': rutaActual === '/',
+          'scale-110 shadow-lg': botonSeleccionadoMovil === 0
+        }"
+        class="font-bold font-lemon transform transition duration-300 ease-in-out">
+        Inicio
+      </a>
+    </li>
+    <li>
+      <a (click)="redirigir('/acerca'); cerrarMenu()" (touchstart)="activarHoverMovilMenu(1)" (touchend)="desactivarHoverMovilMenu()"
+        [ngClass]="{
+          'bg-[#8CC63F] px-4 py-2 rounded-full': rutaActual.includes('/acerca'),
+          'scale-110 shadow-lg': botonSeleccionadoMovil === 1
+        }"
+        class="font-bold font-lemon transform transition duration-300 ease-in-out">
+        Acerca
+      </a>
+    </li>
+    <li>
+      <a (click)="redirigir('/comousar'); cerrarMenu()" (touchstart)="activarHoverMovilMenu(2)" (touchend)="desactivarHoverMovilMenu()"
+        [ngClass]="{
+          'bg-[#8CC63F] px-4 py-2 rounded-full': rutaActual.includes('/comousar'),
+          'scale-110 shadow-lg': botonSeleccionadoMovil === 2
+        }"
+        class="font-bold font-lemon transform transition duration-300 ease-in-out">
+        Cómo usar
+      </a>
+    </li>
+    <li>
+      <a (click)="redirigir('/emprendimientos'); cerrarMenu()" (touchstart)="activarHoverMovilMenu(3)" (touchend)="desactivarHoverMovilMenu()"
+        [ngClass]="{
+          'bg-[#8CC63F] px-4 py-2 rounded-full': rutaActual.includes('/emprendimientos') || rutaActual.startsWith('/emprendimiento/'),
+          'scale-110 shadow-lg': botonSeleccionadoMovil === 3
+        }"
+        class="font-bold font-lemon transform transition duration-300 ease-in-out">
+        Emprendimientos
+      </a>
+    </li>
+    <li>
+      <a (click)="redirigir('/contactos'); cerrarMenu()" (touchstart)="activarHoverMovilMenu(4)" (touchend)="desactivarHoverMovilMenu()"
+        [ngClass]="{
+          'bg-[#8CC63F] px-4 py-2 rounded-full': rutaActual.includes('/contactos'),
+          'scale-110 shadow-lg': botonSeleccionadoMovil === 4
+        }"
+        class="font-bold font-lemon transform transition duration-300 ease-in-out">
+        Contacto
+      </a>
+    </li>
+  </ul>
 
-      <ul
-        class="relative z-10 flex flex-col items-center justify-center flex-grow gap-6 text-2xl font-bold font-inriaLight">
-        <li>
-          <a (click)="redirigir('/'); cerrarMenu()" [ngClass]="{
-         'bg-[#8CC63F] px-4 py-2 rounded-full': rutaActual === '/'
-       }" class="font-bold font-lemon transition">
-            Inicio
-          </a>
-        </li>
-        <li>
-          <a (click)="redirigir('/acerca'); cerrarMenu()" [ngClass]="{
-         'bg-[#8CC63F] px-4 py-2 rounded-full': rutaActual.includes('/acerca')
-       }" class="font-bold font-lemon transition">
-            Acerca
-          </a>
-        </li>
-        <li>
-          <a (click)="redirigir('/comousar'); cerrarMenu()" [ngClass]="{
-         'bg-[#8CC63F] px-4 py-2 rounded-full': rutaActual.includes('/comousar')
-       }" class="font-bold font-lemon transition">
-            Cómo usar
-          </a>
-        </li>
-        <li>
-          <a (click)="redirigir('/emprendimientos'); cerrarMenu()" [ngClass]="{
-         'bg-[#8CC63F] px-4 py-2 rounded-full': rutaActual.includes('/emprendimientos') || rutaActual.startsWith('/emprendimiento/')
-       }" class="font-bold font-lemon transition">
-            Emprendimientos
-          </a>
-        </li>
-        <li>
-          <a (click)="redirigir('/contactos'); cerrarMenu()" [ngClass]="{
-         'bg-[#8CC63F] px-4 py-2 rounded-full': rutaActual.includes('/contactos')
-       }" class="font-bold font-lemon transition">
-            Contacto
-          </a>
-        </li>
-      </ul>
-
-
-
-    </nav>
-
+</nav>
   </div>
 </header>
